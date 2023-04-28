@@ -361,6 +361,17 @@
           }
         }
       },
+      "CompatGenerateOptions": {
+        "type": "object",
+        "properties": {
+          "wait_for_model": {
+            "type": "boolean"
+          },
+          "use_cache": {
+            "type": "boolean"
+          }
+        }
+      },
       "CompatGenerateRequest": {
         "type": "object",
         "required": [
@@ -375,7 +386,11 @@
             "$ref": "#/components/schemas/GenerateParameters"
           },
           "stream": {
-            "type": "boolean"
+            "type": "boolean",
+            "nullable": false
+          },
+          "options": {
+            "$ref": "#/components/schemas/CompatGenerateOptions"
           }
         }
       },
